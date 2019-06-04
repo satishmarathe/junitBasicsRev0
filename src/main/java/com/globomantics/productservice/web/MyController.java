@@ -10,6 +10,9 @@ import com.globomantics.productservice.model.MyOrderSummary;
 public class MyController {
 	
 	public MyOrderSummary transform( MyOrder myOrder) {
+		if(null == myOrder) {
+			throw new IllegalArgumentException("myOrder should not be null");
+		}
 		MyOrderSummary myOrderSummaryResult = new MyOrderSummary();
 		
 		myOrderSummaryResult.setOrderNumber(myOrder.getOrderNumber());
@@ -30,6 +33,7 @@ public class MyController {
 			}//for
 		}
 		myOrderSummaryResult.setItemCount(totalItemCount);
+		myOrderSummaryResult.setTotalAmount(totalItemPrice);
 		return myOrderSummaryResult;
 	}
 }
