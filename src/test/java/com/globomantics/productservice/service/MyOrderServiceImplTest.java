@@ -12,7 +12,7 @@ import org.mockito.Mockito;
 import com.globomantics.productservice.model.MyOrder;
 import com.globomantics.productservice.model.MyOrderSummary;
 import com.globomantics.productservice.repository.MyOrderDao;
-import com.globomantics.productservice.transformer.MyOrderEntityToOrderSummaryTransformer;
+import com.globomantics.productservice.transformer.MyOrderToOrderSummaryTransformer;
 
 public class MyOrderServiceImplTest {
 	
@@ -30,7 +30,7 @@ public class MyOrderServiceImplTest {
 		target.setOrderDao(mockOrderDao);
 		
 		//MyOrderEntityToOrderSummaryTransformer myTransformer = Mockito.mock(MyOrderEntityToOrderSummaryTransformer.class);
-		MyOrderEntityToOrderSummaryTransformer myTransformer = new MyOrderEntityToOrderSummaryTransformer();
+		MyOrderToOrderSummaryTransformer myTransformer = new MyOrderToOrderSummaryTransformer();
 		
 		target.setTransformer(myTransformer);
 		

@@ -7,7 +7,7 @@ import com.globomantics.productservice.model.MyOrder;
 import com.globomantics.productservice.model.MyOrderItem;
 import com.globomantics.productservice.model.MyOrderSummary;
 
-public class MyOrderEntityToOrderSummaryTransformer {
+public class MyOrderToOrderSummaryTransformer {
 	
 	public MyOrderSummary transform( MyOrder myOrder) {
 		if(null == myOrder) {

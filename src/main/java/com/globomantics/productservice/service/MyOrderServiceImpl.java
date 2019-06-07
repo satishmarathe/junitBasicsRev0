@@ -8,18 +8,18 @@ import com.globomantics.productservice.common.MyServiceException;
 import com.globomantics.productservice.model.MyOrder;
 import com.globomantics.productservice.model.MyOrderSummary;
 import com.globomantics.productservice.repository.MyOrderDao;
-import com.globomantics.productservice.transformer.MyOrderEntityToOrderSummaryTransformer;
+import com.globomantics.productservice.transformer.MyOrderToOrderSummaryTransformer;
 
 public class MyOrderServiceImpl implements MyOrderService {
 
 	private MyOrderDao orderDao = null;
-	private MyOrderEntityToOrderSummaryTransformer transformer = null;
+	private MyOrderToOrderSummaryTransformer transformer = null;
 	
 	public void setOrderDao(final MyOrderDao orderDao) {
 		this.orderDao = orderDao;
 	}
 	
-	public void setTransformer(final MyOrderEntityToOrderSummaryTransformer transformer) {
+	public void setTransformer(final MyOrderToOrderSummaryTransformer transformer) {
 		this.transformer = transformer;
 	}
 	

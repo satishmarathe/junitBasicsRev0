@@ -1,5 +1,5 @@
-# productservice
-Sample application with basics about Junit5 and Mockito.
+# sample with Junit5 and Mockito
+Sample application with basics about .
 
 # Example 1
 This is an example of mocking a stand alone method 
@@ -23,5 +23,10 @@ So here the Junit sample is exhibiting two important aspects:
   This is a very critical aspect which when understood will be useful !
   
 2 shows how we can use Mockito to Mock
+
+---------------------------------------------------------------------------------------------
+# Questions 
+
+#1 How does spring boot start - can you call the rest service ?
 
  
