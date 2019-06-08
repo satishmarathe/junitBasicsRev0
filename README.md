@@ -28,5 +28,27 @@ So here the Junit sample is exhibiting two important aspects:
 # Questions 
 
 #1 How does spring boot start - can you call the rest service ?
+a
+
+---------------------------------------------------------------------------------------------
+# TODOS
+#1 To introduce Logging 
+
+#2 To introduce Code coverage 
+
+#3 Remove 'new' operator using Spring 
+a
+
+---------------------------------------------------------------------------------------------
+# LEARNINGS
+
+#1 assertThrows 
+We learnt how to simulate an exception and to test with this annotation 
+
+#2 Functional Interface : Executable
+We learnt that this needs to be provided as a second parameter in the assertion 'assertThrows'
+
+
+
 
  

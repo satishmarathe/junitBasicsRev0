@@ -42,8 +42,12 @@ public class MyOrderServiceImpl implements MyOrderService {
 			}
 			
 		} catch (MyDataAccessException e) {
+			System.out.println(" in MyDataAccessException ");
 			// You should log the error
 			throw new MyServiceException("Data access error occurred", e);
+		}catch (Exception e) {
+			System.out.println(" in Exception ");
+			throw new MyServiceException("System error occurred", e);
 		}
 		System.out.println("<<< MyOrderServiceImpl getOrderSummary end >>>");
 		return resultList;
