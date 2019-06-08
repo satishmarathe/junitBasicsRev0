@@ -95,7 +95,13 @@ public class MyOrderServiceImplTest {
 			List <MyOrderSummary> result = target.getOrderSummary(CUSTOMER_ID);
 		});
 	}
-
+	
+	/**
+	 * This test method is testing the +ve scenario when everything works well
+	 * This is just a start and can be expanded further.
+	 * 
+	 * @throws Exception
+	 */
 	@Test
 	public void test_getOrderSummary_success() throws Exception {
 		/** setup **/
@@ -113,6 +119,11 @@ public class MyOrderServiceImplTest {
 		target.setTransformer(myTransformer);
 
 		List<MyOrder> mockDaoResponse =  new ArrayList<MyOrder>();
+		MyOrder myOrder1 = new MyOrder();
+		MyOrder myOrder2 = new MyOrder();
+		
+		mockDaoResponse.add(myOrder1);
+		mockDaoResponse.add(myOrder2);
 
 
 		Mockito.when(mockOrderDao.findOrdersByCustomer(CUSTOMER_ID))
@@ -124,6 +135,6 @@ public class MyOrderServiceImplTest {
 
 		/**verification **/
 		assertNotNull(result);
-		//assertEquals(1, result.size());
+		assertEquals(2, result.size());
 	}
 }
